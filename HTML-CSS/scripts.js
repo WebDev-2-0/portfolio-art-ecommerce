@@ -1,33 +1,33 @@
-/*
- *This is the script file copied from https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog. It is not working like it is supposed to. Debug the code.
- */
 
-const showButton = document.getElementById("showDialog");
-const favDialog = document.getElementById("favDialog");
-const outputBox = document.querySelector("output");
-const selectEl = favDialog.querySelector("select");
-const confirmBtn = favDialog.querySelector("#confirmBtn");
-
-// "Show the dialog" button opens the <dialog> modally
-showButton.addEventListener("click", () => {
-  favDialog.showModal();
-});
-
-// "Favorite animal" input sets the value of the submit button
-selectEl.addEventListener("change", (e) => {
-  confirmBtn.value = selectEl.value;
-});
-
-// "Cancel" button closes the dialog without submitting because of [formmethod="dialog"], triggering a close event.
-favDialog.addEventListener("close", (e) => {
-  outputBox.value =
-    favDialog.returnValue === "default"
-      ? "No return value."
-      : `ReturnValue: ${favDialog.returnValue}.`; // Have to check for "default" rather than empty string
-});
-
-// Prevent the "confirm" button from the default behavior of submitting the form, and close the dialog with the `close()` method, which triggers the "close" event.
-confirmBtn.addEventListener("click", (event) => {
-  event.preventDefault(); // We don't want to submit this fake form
-  favDialog.close(selectEl.value); // Have to send the select box value here.
-});
+// const menuToggle = document.getElementById('menu-toggle');
+//       const menuDropdown = document.getElementById('menu-dropdown');
+      
+//       menuToggle.addEventListener('click', () => {
+//         // Toggle the appearance of the dropdown menu
+//         menuDropdown.classList.toggle('opacity-0');
+//         menuDropdown.classList.toggle('pointer-events-none');
+      
+//         // Animate the hamburger icon to X
+//         menuToggle.classList.toggle('close');
+      
+//         // Get all the span tags within the button
+//         const spans = menuToggle.getElementsByTagName('span');
+        
+//         // Change the span icons to X
+//         if (spans[0].classList.contains('transform-gpu')) {
+//           for (let i = 0; i < spans.length; i++) {
+//             spans[i].classList.remove('transform-gpu');
+//             spans[i].classList.add('transform-gpu-rotate-45');
+//             if (i === 1) spans[i].classList.replace('mt-1', '-mt-0.5');
+//             else if (i === 2) spans[i].classList.replace('mt-1', '-mt-2');
+//           }
+//         } else {
+//           // Change the span icons back to hamburger
+//           for (let i = 0; i < spans.length; i++) {
+//             spans[i].classList.remove('transform-gpu-rotate-45');
+//             spans[i].classList.add('transform-gpu');
+//             if (i === 1) spans[i].classList.replace('-mt-0.5', 'mt-1');
+//             else if (i === 2) spans[i].classList.replace('-mt-2', 'mt-1');
+//           }
+//         }
+//       });
