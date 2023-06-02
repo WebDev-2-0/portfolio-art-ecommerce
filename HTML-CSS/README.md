@@ -20,8 +20,8 @@ The project consists of the following files/folders in its root directory:
 - `tailwind.config.js`: This file contains the configurations for Tailwind.
 
 ## Installation 🚀
-1. Clone the repository: `git clone https://github.com/<username>/<project-name>.git`
-2. Navigate to the project directory: `cd <project-name>`
+1. Clone the repository: `git clone https://github.com/nanagaisie1/wp-art-ecommerce.git`
+2. Navigate to the project directory: `cd HTML-CSS`
 3. Install the dependencies: `npm install`
 4. Run the development command: `npm start` or `node server.js`
 5. Open your browser and go to [http://localhost:3000/](http://localhost:3000/)
