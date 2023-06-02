@@ -59,35 +59,6 @@
         Book Now
       </button>
 
-      <!--
-        * The code below was copied from the mozilla documentations page on how to use the dialog property with its javascript code. The code for the script can be found in the scripts.js file in the root folder. As of now it is not working as expected. A dialog box is supposed to be opened when the 'show the dialog' is clicked. Review the code and find out the bugs that is not making the code work correctly.
-        https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog
-      -->
-      <!-- A modal dialog containing a form -->
-      <!-- <dialog id="favDialog">
-        <form>
-          <p>
-            <label
-            >Favorite animal:
-            <select>
-              <option value="default">Choose…</option>
-              <option>Brine shrimp</option>
-              <option>Red panda</option>
-              <option>Spider monkey</option>
-            </select>
-          </label>
-        </p>
-        <div>
-          <button value="cancel" formmethod="dialog">Cancel</button>
-          <button id="confirmBtn" value="default">Confirm</button>
-        </div>
-      </form>
-    </dialog>
-    <p>
-      <button id="showDialog">Show the dialog</button>
-    </p>
-    <output></output> -->
-
       <!-- * This code is responsible for showing the hamburger menu on medium screens.
  *It also handles the dropdown menu that appears when the hamburger menu is clicked.
  *The hamburger menu will appear when the menu-toggle button is clicked.
@@ -148,7 +119,7 @@
         </ul>
       </div>
     </header>
-    <script>
+    <!-- <script>
       const menuToggle = document.getElementById("menu-toggle");
       const menuDropdown = document.getElementById("menu-dropdown");
 
@@ -162,6 +133,10 @@
 
         // Get all the span tags within the button
         const spans = menuToggle.getElementsByTagName("span");
+        if (spans.length !== 3) {
+          // If there's an error, exit the function
+          return;
+        }
 
         // Change the span icons to X
         if (spans[0].classList.contains("transform-gpu")) {
@@ -181,6 +156,6 @@
           }
         }
       });
-    </script>
+    </script> -->
   </body>
 </html>
