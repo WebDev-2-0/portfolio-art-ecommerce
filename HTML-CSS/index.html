@@ -4,14 +4,108 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <script src="./scripts.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="./styles.css" rel="stylesheet" />
     <title>Art Galllery</title>
   </head>
   <body>
-    <div class="container">
-      <nav class="text-3xl font-bold">Hello</nav>
-    </div>
-  </body>
-</html>
+    <header
+      class="fixed top-0 left-0 w-full bg-white h-16 px-6 flex justify-between items-center shadow-md z-10">
+      <a href="/"
+        class="text-gray-900 font-semibold text-lg hover:text-gray-700 transition duration-300">Logo</a>
+
+      <!-- Hamburger menu for medium screens -->
+      <input class="hidden" type="checkbox" id="menu-toggle">
+
+      <header
+        class="fixed top-0 left-0 w-full bg-white h-16 px-6 flex justify-between items-center shadow-md z-10">
+        <a href="/"
+          class="text-gray-900 font-semibold text-lg hover:text-gray-700 transition duration-300">Logo</a>
+
+        <!-- Hamburger menu for medium screens -->
+        <!-- <button id="menu-toggle"
+          class="md:hidden cursor-pointer text-3xl focus:outline-none transition duration-300">
+          <span
+            class="block relative w-6 h-0.5 bg-gray-900 transition duration-300 transform-gpu ease-out"></span>
+          <span
+            class="block relative w-6 h-0.5 bg-gray-900 transition duration-300 transform-gpu ease-out mt-1"></span>
+          <span
+            class="block relative w-6 h-0.5 bg-gray-900 transition duration-300 transform-gpu ease-out mt-1"></span>
+        </button> -->
+        <!-- A modal dialog containing a form -->
+        <dialog id="favDialog">
+          <form>
+            <p>
+              <label>Favorite animal:
+                <select>
+                  <option value="default">Choose…</option>
+                  <option>Brine shrimp</option>
+                  <option>Red panda</option>
+                  <option>Spider monkey</option>
+                </select>
+              </label>
+            </p>
+            <div>
+              <button value="cancel" formmethod="dialog">Cancel</button>
+              <button id="confirmBtn" value="default">Confirm</button>
+            </div>
+          </form>
+        </dialog>
+        <p>
+          <button id="showDialog">Show the dialog</button>
+        </p>
+        <output></output>
+
+        <nav class="hidden md:block">
+          <ul class="flex space-x-6">
+            <li>
+              <a href="#services"
+                class="text-gray-700 hover:text-gray-900 transition duration-300 underline-thick-offset-2">Services</a>
+            </li>
+            <li>
+              <a href="#works"
+                class="text-gray-700 hover:text-gray-900 transition duration-300 underline-thick-offset-2">Works</a>
+            </li>
+            <li>
+              <a href="#about"
+                class="text-gray-700 hover:text-gray-900 transition duration-300 underline-thick-offset-2">About</a>
+            </li>
+            <li>
+              <a href="#contact"
+                class="text-gray-700 hover:text-gray-900 transition duration-300 underline-thick-offset-2">Contact</a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Book Now button -->
+        <button
+          class="hidden md:block bg-yellow-400 hover:bg-yellow-300 text-white font-semibold px-6 py-2 rounded-full shadow-md transition duration-300">
+          Book Now
+        </button>
+
+        <!-- Dropdown Menu -->
+        <div id="menu-dropdown"
+          class="absolute top-16 bg-white w-full text-center md:hidden opacity-0 pointer-events-none transition-all duration-300">
+          <ul class="block space-y-4 py-2">
+            <li>
+              <a href="#services"
+                class="text-gray-700 hover:text-gray-900 transition duration-300 block">Services</a>
+            </li>
+            <li>
+              <a href="#works"
+                class="text-gray-700 hover:text-gray-900 transition duration-300 block">Works</a>
+            </li>
+            <li>
+              <a href="#about"
+                class="text-gray-700 hover:text-gray-900 transition duration-300 block">About</a>
+            </li>
+            <li>
+              <a href="#contact"
+                class="text-gray-700 hover:text-gray-900 transition duration-300 block">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </header>
+    </body>
+  </html>
