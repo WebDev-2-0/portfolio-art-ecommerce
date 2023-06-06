@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const menuDropdown = document.getElementById("menu-dropdown");
   const firstSpan = document.getElementById("firstSpan");
   const thirdSpan = document.getElementById("thirdSpan");
+  const herosection = document.getElementById("hero-section");
+
 
   menuToggle.addEventListener("click", () => {
     // Toggle the appearance of the dropdown menu
@@ -17,10 +19,12 @@ document.addEventListener("DOMContentLoaded", () => {
     if (menuToggle.classList.contains("close") === true) {
       firstSpan.classList.add("rotate-45", "translate-y-1");
       thirdSpan.classList.add("-rotate-45", "-translate-y-0.5");
+      herosection.classList.add("blur-sm");
     } else {
       // Change the span icons back to hamburger
      firstSpan.classList.remove("rotate-45", "translate-y-1");
      thirdSpan.classList.remove("-rotate-45", "-translate-y-0.5");
+     herosection.classList.remove("blur-sm");
     }
   });
 });
