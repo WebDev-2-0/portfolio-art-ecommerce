@@ -13,3 +13,76 @@
 @layer utilities {
     /* Utility classes */
   }
+  /* styles.css */
+
+.hero-section {
+  height: 100vh;
+  max-width: 100%;
+  margin: auto;
+  text-align: center;
+  background-image: url('./public/background1.png');
+  background: local;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #cfef00;
+  position: relative;
+  z-index: 11;
+}
+
+.hero-section .content {
+  position: absolute;
+  top: 33%;
+  bottom: 33%;
+  width: 100%;
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: regular;
+  color: #000000;
+  font-family: monospace;
+  margin-bottom: 1rem;
+}
+
+.hero-section p {
+  color: #000000;
+  margin-bottom: 2rem;
+}
+
+.hero-section button {
+  display: flex;
+  justify-content: center;
+}
+
+  button { 
+    cursor: pointer;
+    font-weight: 350;
+    font-family: Helvetica,"sans-serif";
+    transition: all .2s;
+    padding: 10px 20px;
+    border-radius: 100px;
+    background: #cfef00;
+    border: 1px solid transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    width:170px
+  }
+  button:hover {
+    background: #c4e201;
+  }
+  
+  button > svg {
+    width: 34px;
+    margin-left: 10px;
+    transition: transform .3s ease-in-out;
+  }
+  
+  button:hover svg {
+    transform: translateX(20px);
+  }
+  
+  button:active {
+    transform: scale(0.95);
+  }
