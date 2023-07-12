@@ -1,5 +1,7 @@
-/** @type {import('tailwindcss').Config} */
+// tailwind.config.js
 module.exports = {
+  future: { },
+  purge: { },
   content: [
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
@@ -10,8 +12,11 @@ module.exports = {
       },
     },
   },
-  plugins: {
-    tailwindcss: {},
-    autoprefixer: {},
-  },
+  variants: { },
+  plugins: [
+    //...
+    require('tailwindcss'),
+    require('autoprefixer'),
+    //...
+  ],
 };

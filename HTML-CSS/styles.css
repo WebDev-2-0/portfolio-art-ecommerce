@@ -3,13 +3,14 @@
 @tailwind utilities;
 
 @layer base {
-
+  /*Base styles*/
 }
 
 @layer components {
-    
+    /*Component-specific styles*/
 }
 
 @layer utilities {
-    
+    /* Utility classes */
   }
+  /* styles.css */
